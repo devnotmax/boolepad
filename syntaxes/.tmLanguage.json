@@ -1,0 +1,66 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "boolepad",
+  "scopeName": "source.boolepad",
+  "patterns": [
+    { "include": "#refinements" },
+    { "include": "#keywords" },
+    { "include": "#io_functions" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#cases" }
+  ],
+  "repository": {
+    "refinements": {
+      "patterns": [
+        {
+          "name": "keyword.control.refinement.pseudocodigo",
+          "match": "\\bA[0-9]+\\b"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.pseudocodigo",
+          "match": "(?i)\\b(si|fin_si|sino|mientras|fin_mientras|hacer|fin_hacer|veces|segun|parar|inicializar|funcion|fin_funcion|procedimiento|fin_procedimiento)\\b"
+        }
+      ]
+    },
+    "io_functions": {
+      "patterns": [
+        {
+          "name": "support.function.builtin.pseudocodigo",
+          "match": "(?i)\\b(leer|escribir)\\b"
+        }
+      ]
+    },
+    "cases": {
+      "patterns": [
+        {
+          "name": "constant.numeric.case.pseudocodigo",
+          "match": "\\b[0-9]+:\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.pseudocodigo",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.pseudocodigo",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.pseudocodigo",
+          "match": "\\b[0-9]+\\b"
+        }
+      ]
+    }
+  }
+}

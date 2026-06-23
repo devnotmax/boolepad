@@ -1,0 +1,15 @@
+.vscode/**
+.vscode-test/**
+.gitignore
+vsc-extension-quickstart.md
+node_modules
+test
+.github
+*.vsix
+**/*.png
+**/*.jpg
+**/*.gif
+!resources/icon.png
+!resources/*.png
+!resources/*.jpg
+!resources/*.gif

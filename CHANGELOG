@@ -1,0 +1,12 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [1.0.0] - 2026-06-23
+
+### Added
+
+- Soporte inicial de sintaxis para el pseudocódigo de la cátedra.
+- Resaltado de refinamientos (`A0`, `A1`, etc.), estructuras de control y funciones de E/S.
+- Autocompletado mediante snippets inteligentes para bloques `mientras` y `si`.
+- Configuración de auto-cierre de comillas y paréntesis.

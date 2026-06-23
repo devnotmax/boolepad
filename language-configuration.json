@@ -1,0 +1,25 @@
+{
+  "comments": {
+    "lineComment": "//"
+  },
+  "brackets": [
+    ["[", "]"],
+    ["(", ")"]
+  ],
+  "autoClosingPairs": [
+    { "open": "\"", "close": "\"", "notIn": ["string"] },
+    { "open": "(", "close": ")" },
+    { "open": "[", "close": "]" }
+  ],
+  "surroundingPairs": [
+    ["\"", "\""],
+    ["(", ")"],
+    ["[", "]"]
+  ],
+  "folding": {
+    "markers": {
+      "start": "(?i)^\\s*(mientras|si|hacer|segun|funcion|procedimiento)\\b",
+      "end": "(?i)^\\s*(fin_mientras|fin_si|fin_hacer|fin_funcion|fin_procedimiento)\\b"
+    }
+  }
+}

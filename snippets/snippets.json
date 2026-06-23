@@ -1,0 +1,12 @@
+{
+  "Estructura Mientras": {
+    "prefix": "mientras",
+    "body": ["mientras ${1:condicion} hacer", "\t$0", "fin_mientras"],
+    "description": "Crea un bucle mientras estructurado"
+  },
+  "Estructura Si": {
+    "prefix": "si",
+    "body": ["si ${1:condicion} entonces", "\t$0", "fin_si"],
+    "description": "Crea una estructura condicional si"
+  }
+}
