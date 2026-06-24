@@ -4,14 +4,17 @@
   "icon": "resources/icon.png",
   "displayName": "boolepad",
   "description": "Extensión de sintaxis recomendada por la cátedra de la FACET (UNT) para pseudocódigo",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "license": "MIT",
   "engines": {
     "vscode": "^1.75.0"
   },
+  "main": "./extension.js",
+  "activationEvents": [
+    "onLanguage:boolepad"
+  ],
   "scripts": {
-    "package": "vsce package",
-    "vscode:prepublish": "echo 'Listo para empaquetar'"
+    "package": "vsce package"
   },
   "devDependencies": {
     "vsce": "^2.3.0"
@@ -24,12 +27,7 @@
     "url": "https://github.com/devnotmax/boolepad/issues"
   },
   "homepage": "https://github.com/devnotmax/boolepad#readme",
-  "keywords": [
-    "pseudocode",
-    "pseudocodigo",
-    "syntax",
-    "boolepad"
-  ],
+  "keywords": ["pseudocode", "pseudocodigo", "syntax", "boolepad"],
   "categories": [
     "Programming Languages"
   ],
