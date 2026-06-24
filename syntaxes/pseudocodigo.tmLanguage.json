@@ -3,18 +3,38 @@
   "name": "boolepad",
   "scopeName": "source.boolepad",
   "patterns": [
+    { "include": "#comments" },
+    { "include": "#refinement_calls" },
     { "include": "#refinements" },
     { "include": "#keywords" },
+    { "include": "#types" },
     { "include": "#io_functions" },
     { "include": "#strings" },
     { "include": "#numbers" },
+    { "include": "#operators" },
     { "include": "#cases" }
   ],
   "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.boolepad",
+          "match": "//.*$"
+        }
+      ]
+    },
+    "refinement_calls": {
+      "patterns": [
+        {
+          "name": "entity.name.function.refinement.boolepad",
+          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*(?=\\s*\\()"
+        }
+      ]
+    },
     "refinements": {
       "patterns": [
         {
-          "name": "keyword.control.refinement.pseudocodigo",
+          "name": "keyword.control.refinement.boolepad",
           "match": "\\bA[0-9]+\\b"
         }
       ]
@@ -22,34 +42,62 @@
     "keywords": {
       "patterns": [
         {
-          "name": "keyword.control.pseudocodigo",
-          "match": "(?i)\\b(si|fin_si|sino|mientras|fin_mientras|hacer|fin_hacer|veces|segun|parar|inicializar|funcion|fin_funcion|procedimiento|fin_procedimiento)\\b"
+          "name": "keyword.control.boolepad",
+          "match": "(?i)\\b(si|entonces|fin_si|sino|mientras|fin_mientras|hacer|fin_hacer|veces|segun|parar|inicializar|funcion|fin_funcion|procedimiento|fin_procedimiento|entrada|entradas|salida|salidas|constante|constantes|contante|contantes|variable|variables|auxiliar|auxiliares|mf)\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "storage.type.boolepad",
+          "match": "(?i)\\b(entero|enteros|natural|naturales|real|reales|booleano|booleanos|caracter|caracteres|cadena|cadenas)\\b"
         }
       ]
     },
     "io_functions": {
       "patterns": [
         {
-          "name": "support.function.builtin.pseudocodigo",
+          "name": "support.function.builtin.boolepad",
           "match": "(?i)\\b(leer|escribir)\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.assignment.boolepad",
+          "match": "<-"
+        },
+        {
+          "name": "keyword.operator.comparison.boolepad",
+          "match": "==|!=|<=|>=|<|>"
+        },
+        {
+          "name": "keyword.operator.arithmetic.boolepad",
+          "match": "\\+|\\-|\\*|/"
+        },
+        {
+          "name": "keyword.operator.boolepad",
+          "match": "="
         }
       ]
     },
     "cases": {
       "patterns": [
         {
-          "name": "constant.numeric.case.pseudocodigo",
+          "name": "constant.numeric.case.boolepad",
           "match": "\\b[0-9]+:\\b"
         }
       ]
     },
     "strings": {
-      "name": "string.quoted.double.pseudocodigo",
+      "name": "string.quoted.double.boolepad",
       "begin": "\"",
       "end": "\"",
       "patterns": [
         {
-          "name": "constant.character.escape.pseudocodigo",
+          "name": "constant.character.escape.boolepad",
           "match": "\\\\."
         }
       ]
@@ -57,7 +105,7 @@
     "numbers": {
       "patterns": [
         {
-          "name": "constant.numeric.pseudocodigo",
+          "name": "constant.numeric.boolepad",
           "match": "\\b[0-9]+\\b"
         }
       ]

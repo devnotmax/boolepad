@@ -4,7 +4,7 @@
   "icon": "resources/icon.png",
   "displayName": "boolepad",
   "description": "Extensión de sintaxis recomendada por la cátedra de la FACET (UNT) para pseudocódigo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "engines": {
     "vscode": "^1.75.0"
