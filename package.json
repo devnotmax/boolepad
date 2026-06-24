@@ -2,35 +2,19 @@
   "name": "boolepad",
   "publisher": "madebymaxi",
   "icon": "resources/icon.png",
-  "displayName": "Pseudocódigo Cátedra",
-  "description": "Extensión de sintaxis para pseudocódigo",
+  "displayName": "boolepad",
+  "description": "Extensión de sintaxis recomendada por la cátedra de la FACET (UNT) para pseudocódigo",
   "version": "0.1.0",
   "license": "MIT",
   "engines": {
-    "vscode": "^1.125.0"
+    "vscode": "^1.75.0"
   },
   "scripts": {
-    "lint": "eslint . --ext .js,.json || true",
-    "test": "node ./test/runTest.js",
     "package": "vsce package",
-    "vscode:prepublish": "npm run package",
-    "prepare": "husky install",
-    "prepublishOnly": "npm run lint && npm test"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ]
+    "vscode:prepublish": "echo 'Listo para empaquetar'"
   },
   "devDependencies": {
-    "vsce": "^2.3.0",
-    "eslint": "^8.48.0",
-    "mocha": "^10.2.0",
-    "glob": "^7.2.3",
-    "@vscode/test-electron": "^2.5.0",
-    "husky": "^8.0.0",
-    "lint-staged": "^13.0.0"
+    "vsce": "^2.3.0"
   },
   "repository": {
     "type": "git",
@@ -40,7 +24,12 @@
     "url": "https://github.com/devnotmax/boolepad/issues"
   },
   "homepage": "https://github.com/devnotmax/boolepad#readme",
-  "keywords": ["pseudocode", "pseudocodigo", "syntax", "boolepad"],
+  "keywords": [
+    "pseudocode",
+    "pseudocodigo",
+    "syntax",
+    "boolepad"
+  ],
   "categories": [
     "Programming Languages"
   ],
@@ -49,26 +38,27 @@
       {
         "id": "boolepad",
         "aliases": [
-          "Boolepad",
+          "Boolepad Pseudocódigo",
           "boolepad"
         ],
         "extensions": [
-          ".pseudo"
+          ".pseudo",
+          ".txt"
         ],
-        "configuration": "./language-configuration.json",
-        "snippets": [
-          {
-            "language": "boolepad",
-            "path": "./snippets/snippets.json"
-          }
-        ]
+        "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
       {
         "language": "boolepad",
         "scopeName": "source.boolepad",
-        "path": "./syntaxes/.tmLanguage.json"
+        "path": "./syntaxes/pseudocodigo.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "boolepad",
+        "path": "./snippets/snippets.json"
       }
     ]
   }
